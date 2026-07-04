@@ -20,8 +20,14 @@ const server = http.createServer((req, res) => {
   const decodedUrl = decodeURIComponent(req.url);
   let filePath = path.join(__dirname, decodedUrl === '/' ? 'index.html' : decodedUrl);
   
-  // Basic security: prevent escaping directory
-  if (!filePath.startsWith(__dirname)) {
+  console.log(`[REQ] ${req.method} ${req.url} -> Resolved: ${filePath}`);
+
+  // Basic security: prevent escaping directory (normalize both paths first to avoid case/slash discrepancies)
+  const normDir = path.normalize(__dirname).toLowerCase();
+  const normPath = path.normalize(filePath).toLowerCase();
+
+  if (!normPath.startsWith(normDir)) {
+    console.log(`[RES] 403 Forbidden: ${req.url}`);
     res.writeHead(403, { 'Content-Type': 'text/plain' });
     res.end('Forbidden');
     return;
@@ -33,13 +39,16 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
+        console.log(`[RES] 404 Not Found: ${req.url}`);
         res.writeHead(404, { 'Content-Type': 'text/plain' });
         res.end('404 Not Found');
       } else {
+        console.log(`[RES] 500 Server Error: ${req.url} - ${err.message}`);
         res.writeHead(500, { 'Content-Type': 'text/plain' });
         res.end('500 Internal Server Error');
       }
     } else {
+      console.log(`[RES] 200 OK: ${req.url} (${contentType})`);
       res.writeHead(200, { 'Content-Type': contentType });
       res.end(content);
     }
