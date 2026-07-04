@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Hotel Indrayani Pure Veg | Pure Vegetarian Restaurant Menu</title>
+  <meta name="description" content="Explore our rich, affordable pure veg menu featuring Maharashtrian Sev Bhaji, North Indian Paneer Masala, crispy South Indian Dosa, Chinese, & Biryani at Hotel Indrayani.">
+  <meta name="keywords" content="Hotel Indrayani Pure Veg menu, pure veg menu Talegaon, Maharashtrian dishes Talegaon, North Indian food Induri, South Indian thali bypass">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Top Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="nav-brand-logo">
+          <i class="fa-solid fa-leaf text-success fs-3"></i>
+          <span>INDRAYANI</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" id="link-home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="menu.html" id="link-menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html" id="link-gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservations.html" id="link-reservations">Reservations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" id="link-contact">Contact & Map</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="tel:+919922234567" class="btn btn-outline-success d-none d-xl-inline-block" id="header-call-btn">
+              <i class="fa-solid fa-phone me-2"></i>+91 99222 34567
+            </a>
+            <a href="reservations.html" class="btn btn-custom-green" id="header-reserve-btn">Book Table</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header Subpage -->
+  <section class="section-padding section-bg-cream" style="margin-top: 70px; padding: 50px 0 30px;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Pure Vegetarian Delights</span>
+        <h1 class="display-5 fw-bold text-success mb-2">Our Culinary Menu</h1>
+        <p class="lead text-muted max-width-600 mx-auto">Fresh, hygienic preparation. Serving rich Maharashtrian flavors, North Indian classics, South Indian favorites, Chinese comfort, and Dum Biryani.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section class="section-padding" style="padding-top: 20px;">
+    <div class="container">
+      
+      <!-- Interactive Search Bar -->
+      <div class="menu-search-bar" id="menu-search-wrapper">
+        <div class="input-group">
+          <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+          <input type="text" class="form-control border-start-0 ps-0" placeholder="Search for your favorite dish (e.g., Paneer, Sev Bhaji, Dosa)..." id="dish-search-input" aria-label="Search Dish">
+          <button class="btn btn-success" type="button" id="clear-search-btn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="menu-tabs" id="menu-tabs-wrapper">
+        <button class="menu-tab-btn active" data-category="all" id="tab-all">All Items</button>
+        <button class="menu-tab-btn" data-category="maharashtrian" id="tab-maharashtrian">Maharashtrian</button>
+        <button class="menu-tab-btn" data-category="north-indian" id="tab-north-indian">North Indian</button>
+        <button class="menu-tab-btn" data-category="south-indian" id="tab-south-indian">South Indian</button>
+        <button class="menu-tab-btn" data-category="chinese" id="tab-chinese">Chinese</button>
+        <button class="menu-tab-btn" data-category="biryani-thali" id="tab-biryani-thali">Biryani & Thali</button>
+        <button class="menu-tab-btn" data-category="beverages" id="tab-beverages">Beverages & Sweet</button>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="row g-4" id="menu-items-grid">
+        
+        <!-- Maharashtrian Items -->
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="maharashtrian">
+          <div class="dish-card" id="item-sev-bhaji">
+            <div class="dish-img-container">
+              <img src="assets/images/sev_bhaji.png" alt="Sev Bhaji Maharashtrian" class="dish-img">
+              <div class="dish-badge">Maharashtrian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Sev Bhaji</h3>
+                <div class="dish-price">₹180</div>
+              </div>
+              <p class="dish-desc">A spicy, fiery Maharashtrian gravy loaded with crisp sev. Best enjoyed with soft chapatis or hot bhakri.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success fw-bold"><i class="fa-solid fa-thumbs-up me-1"></i> Bestseller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="maharashtrian">
+          <div class="dish-card" id="item-veg-kolhapuri">
+            <div class="dish-img-container">
+              <img src="assets/images/veg_kolhapuri.png" alt="Veg Kolhapuri" class="dish-img">
+              <div class="dish-badge">Maharashtrian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Veg Kolhapuri</h3>
+                <div class="dish-price">₹220</div>
+              </div>
+              <p class="dish-desc">Fiery mixed vegetable curry seasoned with authentic Kolhapuri dry spices and red chili paste.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-muted"><i class="fa-solid fa-fire text-danger me-1"></i> Spicy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="maharashtrian">
+          <div class="dish-card" id="item-pithla-bhakri">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Pithla Bhakri" class="dish-img">
+              <div class="dish-badge">Maharashtrian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Pithla Bhakri</h3>
+                <div class="dish-price">₹150</div>
+              </div>
+              <p class="dish-desc">Traditional rustic gram flour paste cooked with garlic, coriander, and spices. Served with hot jawar/bajra bhakri.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success"><i class="fa-solid fa-seedling me-1"></i> Healthy Choice</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- North Indian Items -->
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="north-indian">
+          <div class="dish-card" id="item-paneer-masala">
+            <div class="dish-img-container">
+              <img src="assets/images/paneer_masala.png" alt="Paneer Masala North Indian" class="dish-img">
+              <div class="dish-badge">North Indian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Paneer Masala</h3>
+                <div class="dish-price">₹260</div>
+              </div>
+              <p class="dish-desc">Soft paneer chunks prepared in a velvety onion, tomato, and cashew nut base with traditional Punjabi spices.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success fw-bold"><i class="fa-solid fa-thumbs-up me-1"></i> Bestseller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="north-indian">
+          <div class="dish-card" id="item-kaju-curry">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Kaju Curry" class="dish-img">
+              <div class="dish-badge">North Indian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Kaju Masala</h3>
+                <div class="dish-price">₹280</div>
+              </div>
+              <p class="dish-desc">Golden roasted cashew nuts simmered in a mildly sweet, rich yellow gravy. Highly recommended for children.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-muted"><i class="fa-solid fa-child-reaching me-1"></i> Kid-Friendly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="north-indian">
+          <div class="dish-card" id="item-dal-tadka">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Dal Tadka Yellow" class="dish-img">
+              <div class="dish-badge">North Indian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Dal Tadka</h3>
+                <div class="dish-price">₹160</div>
+              </div>
+              <p class="dish-desc">Creamy yellow lentils cooked with spices and finished with a hot double tempering of ghee, cumin, and garlic.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-muted">Comfort Food</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- South Indian Items -->
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="south-indian">
+          <div class="dish-card" id="item-masala-dosa">
+            <div class="dish-img-container">
+              <img src="assets/images/south_indian_specials.png" alt="Crispy Masala Dosa" class="dish-img">
+              <div class="dish-badge">South Indian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Masala Dosa Combo</h3>
+                <div class="dish-price">₹160</div>
+              </div>
+              <p class="dish-desc">Large, crispy golden Dosa stuffed with light spiced potato mash. Served with idli, vada, hot sambar and chutneys.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success fw-bold"><i class="fa-solid fa-thumbs-up me-1"></i> Bestseller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="south-indian">
+          <div class="dish-card" id="item-idli-sambar">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80" alt="Idli Sambar" class="dish-img">
+              <div class="dish-badge">South Indian</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Steamed Idli Sambar</h3>
+                <div class="dish-price">₹80</div>
+              </div>
+              <p class="dish-desc">Four fluffy, cloud-like steamed rice cakes served submerged in boiling spiced sambar and side of fresh coconut chutney.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success"><i class="fa-solid fa-feather-pointed me-1"></i> Light & Healthy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chinese Items -->
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="chinese">
+          <div class="dish-card" id="item-fried-rice">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Veg Fried Rice Chinese" class="dish-img">
+              <div class="dish-badge">Chinese</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Veg Fried Rice</h3>
+                <div class="dish-price">₹190</div>
+              </div>
+              <p class="dish-desc">Wok-tossed basmati rice thrown with crisp vegetables, green onions, and savory Chinese spices.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-muted">Kids Favorite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="chinese">
+          <div class="dish-card" id="item-veg-manchurian">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&q=80" alt="Veg Manchurian" class="dish-img">
+              <div class="dish-badge">Chinese</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Veg Manchurian</h3>
+                <div class="dish-price">₹180</div>
+              </div>
+              <p class="dish-desc">Deep-fried minced vegetable rounds tossed in a chef's special garlic-chili and dark soy reduction sauce.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-muted">Takeaway Favourite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biryani & Thali Items -->
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="biryani-thali">
+          <div class="dish-card" id="item-veg-biryani">
+            <div class="dish-img-container">
+              <img src="assets/images/veg_biryani.png" alt="Veg Dum Biryani" class="dish-img">
+              <div class="dish-badge">Biryani & Thali</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Veg Dum Biryani</h3>
+                <div class="dish-price">₹240</div>
+              </div>
+              <p class="dish-desc">Flavored long grain rice cooked in deep earthen pots layered with whole spices, paneer, and local garden vegetables.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success fw-bold"><i class="fa-solid fa-thumbs-up me-1"></i> Bestseller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="biryani-thali">
+          <div class="dish-card" id="item-special-thali">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Indrayani Special Thali" class="dish-img">
+              <div class="dish-badge">Biryani & Thali</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Indrayani Special Thali</h3>
+                <div class="dish-price">₹320</div>
+              </div>
+              <p class="dish-desc">Our signature heavy meal: 3 chef special curries, dal fry, choice of butter naan or chapati/bhakri, jeera rice, sweet, papad, raita, and pickle.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success"><i class="fa-solid fa-star me-1"></i> Signature</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beverages & Desserts -->
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="beverages">
+          <div class="dish-card" id="item-solkadhi">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Solkadhi pink drink" class="dish-img">
+              <div class="dish-badge">Beverages</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Special Solkadhi</h3>
+                <div class="dish-price">₹60</div>
+              </div>
+              <p class="dish-desc">Traditional digestive pink drink made from kokum extract, coconut milk, fresh ginger, and hint of green chili.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-success"><i class="fa-solid fa-glass-water me-1"></i> Digestive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 menu-item-col" data-category="beverages">
+          <div class="dish-card" id="item-lassi">
+            <div class="dish-img-container">
+              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80" alt="Sweet Masala Lassi" class="dish-img">
+              <div class="dish-badge">Beverages</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-title-wrapper">
+                <h3 class="dish-title">Special Sweet Lassi</h3>
+                <div class="dish-price">₹80</div>
+              </div>
+              <p class="dish-desc">Rich and creamy whipped sweet yogurt drink flavored with cardamom powder and garnished with almond flakes.</p>
+              <div class="dish-footer">
+                <span class="veg-indicator" title="Pure Veg"></span>
+                <span class="text-muted">Refreshing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- No Results Message -->
+      <div class="text-center py-5 d-none" id="menu-no-results">
+        <i class="fa-solid fa-utensils text-muted fs-1 mb-3"></i>
+        <h3>No Dishes Found</h3>
+        <p class="text-muted">We couldn't find any dishes matching your search. Please try searching for another item!</p>
+        <button class="btn btn-success mt-2" id="reset-search-link">View All Items</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Ordering -->
+  <section class="cta-banner-section" id="order-cta">
+    <div class="container">
+      <h2 class="cta-banner-title">Craving Food at Home? Order Now!</h2>
+      <p class="cta-banner-desc">Get fresh, hygienic, pure vegetarian food delivered right to your doorstep via Swiggy or Zomato, or place a takeaway order.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#" target="_blank" rel="noopener" class="btn btn-custom-orange px-4" id="order-zomato-btn">Order via Zomato</a>
+        <a href="#" target="_blank" rel="noopener" class="btn btn-custom-green px-4" id="order-swiggy-btn">Order via Swiggy</a>
+        <a href="tel:+919922234567" class="btn btn-custom-outline text-white border-white px-4" id="order-call-btn">
+          <i class="fa-solid fa-phone me-2"></i>Call to Takeaway
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Floating Call Button -->
+  <a href="tel:+919922234567" class="floating-call-btn d-xl-none" aria-label="Call Hotel Indrayani" id="floating-phone-btn">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand / About Column -->
+        <div class="col-lg-4">
+          <a class="footer-logo" href="index.html" id="footer-logo-link">INDRAYANI<span> PURE VEG</span></a>
+          <p class="mb-4 text-white-50">Providing authentic Maharashtrian, North Indian, South Indian, Chinese, and Biryani specialties since 2018. A dependable pure veg dining spot for families and highway travelers.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="col-6 col-lg-2">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" id="footer-link-home">Home</a></li>
+            <li><a href="menu.html" id="footer-link-menu">Our Menu</a></li>
+            <li><a href="gallery.html" id="footer-link-gallery">Photo Gallery</a></li>
+            <li><a href="reservations.html" id="footer-link-reservations">Table Booking</a></li>
+            <li><a href="contact.html" id="footer-link-contact">Contact & Map</a></li>
+          </ul>
+        </div>
+
+        <!-- Order Online Column -->
+        <div class="col-6 col-lg-2">
+          <h4>Order Online</h4>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-angles-right me-1 text-warning"></i> Zomato Delivery</a></li>
+            <li><a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-angles-right me-1 text-warning"></i> Swiggy Delivery</a></li>
+            <li><a href="tel:+919922234567"><i class="fa-solid fa-angles-right me-1 text-warning"></i> Direct Call Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Address / Timings Column -->
+        <div class="col-lg-4">
+          <h4>Restaurant Info</h4>
+          <div class="footer-contact-item" id="footer-info-address">
+            <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Address:</strong><br>
+              Hotel Indrayani Pure Veg, PPM5+VRR, Talegaon-Chakan Road, Bypass, Induri, Talegaon Dabhade, Maharashtra 410507.
+            </div>
+          </div>
+          <div class="footer-contact-item" id="footer-info-phone">
+            <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Phone Reservation:</strong><br>
+              <a href="tel:+919922234567" class="text-white">+91 99222 34567</a> / <a href="tel:+919922234568" class="text-white">+91 99222 34568</a>
+            </div>
+          </div>
+          <div class="footer-contact-item" id="footer-info-hours">
+            <div class="footer-contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>Opening Hours:</strong><br>
+              All Days: 08:00 AM - 11:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p class="mb-0">&copy; 2026 Hotel Indrayani Pure Veg. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0 text-white-50">Local SEO optimization and Web design for highway diners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

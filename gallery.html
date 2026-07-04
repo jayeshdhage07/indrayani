@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Hotel Indrayani Pure Veg | Pure Veg Restaurant Photos</title>
+  <meta name="description" content="View photos of our delicious pure veg thali, spicy Maharashtrian dishes, cozy family dining room, hygienic kitchen setup, and ample parking space on Talegaon-Chakan Road.">
+  <meta name="keywords" content="Hotel Indrayani photos, pure veg dining room Talegaon, Indrayani restaurant gallery, Indian vegetarian food pictures">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Top Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="nav-brand-logo">
+          <i class="fa-solid fa-leaf text-success fs-3"></i>
+          <span>INDRAYANI</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" id="link-home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html" id="link-menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="gallery.html" id="link-gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservations.html" id="link-reservations">Reservations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" id="link-contact">Contact & Map</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="tel:+919922234567" class="btn btn-outline-success d-none d-xl-inline-block" id="header-call-btn">
+              <i class="fa-solid fa-phone me-2"></i>+91 99222 34567
+            </a>
+            <a href="reservations.html" class="btn btn-custom-green" id="header-reserve-btn">Book Table</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header Subpage -->
+  <section class="section-padding section-bg-cream" style="margin-top: 70px; padding: 50px 0 30px;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Visual Tour</span>
+        <h1 class="display-5 fw-bold text-success mb-2">Our Photo Gallery</h1>
+        <p class="lead text-muted max-width-600 mx-auto">Get a glimpse of our hygienic kitchen, relaxed seating spaces, highway accessibility, and appetizing pure vegetarian specialties.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Gallery Section -->
+  <section class="section-padding" style="padding-top: 20px;">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div class="gallery-tabs mb-5" id="gallery-tabs-wrapper">
+        <button class="menu-tab-btn active" data-filter="all" id="filter-all">Show All</button>
+        <button class="menu-tab-btn" data-filter="food" id="filter-food">Food Specialties</button>
+        <button class="menu-tab-btn" data-filter="interior" id="filter-interior">Interior & Seating</button>
+        <button class="menu-tab-btn" data-filter="exterior" id="filter-exterior">Exterior & Facilities</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="row g-4" id="gallery-grid-wrapper">
+        
+        <!-- Food Items -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="food">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="assets/images/paneer_masala.png" id="gal-paneer">
+            <img src="assets/images/paneer_masala.png" alt="Paneer Masala in copper bowl" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Paneer Masala</h4>
+              <span>North Indian Classic Special</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="food">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="assets/images/sev_bhaji.png" id="gal-sev">
+            <img src="assets/images/sev_bhaji.png" alt="Spicy Sev Bhaji curry" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Sev Bhaji</h4>
+              <span>Maharashtrian Local Special</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="food">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="assets/images/veg_kolhapuri.png" id="gal-kolhapuri">
+            <img src="assets/images/veg_kolhapuri.png" alt="Veg Kolhapuri Curry" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Veg Kolhapuri</h4>
+              <span>Spicy Mix Vegetable Curry</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="food">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="assets/images/south_indian_specials.png" id="gal-dosa">
+            <img src="assets/images/south_indian_specials.png" alt="Crispy Masala Dosa Combo" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>South Indian Specials</h4>
+              <span>Crispy Dosa, Idli & Chutneys</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="food">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="assets/images/veg_biryani.png" id="gal-biryani">
+            <img src="assets/images/veg_biryani.png" alt="Vegetable Dum Biryani" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Veg Dum Biryani</h4>
+              <span>Slow-cooked aromatic basmati rice</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="food">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" id="gal-chinese">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Veg Chinese Fried Rice" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Veg Fried Rice</h4>
+              <span>Stir-fried Chinese comfort food</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interior Items -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="interior">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" id="gal-interior-dining">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Cozy seating family hall" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Family Dining Hall</h4>
+              <span>Spacious, clean, and comfortable seating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="interior">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80" id="gal-interior-decor">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Hygienic tables setup" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Premium Seating Layouts</h4>
+              <span>Elegant and hygienic restaurant layout</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="interior">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80" id="gal-kitchen">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Hygienic vegetable prep area" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Clean Cooking Stations</h4>
+              <span>100% pure veg separate preparation standards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exterior Items -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="exterior">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1200&q=80" id="gal-parking">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80" alt="Spacious parking front area" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Ample Secure Parking</h4>
+              <span>Wide open highway-adjacent parking facility</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="exterior">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" id="gal-exterior-front">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Talegaon-Chakan bypass signage entrance" class="img-fluid">
+            <div class="gallery-overlay">
+              <h4>Restaurant Frontage</h4>
+              <span>Easy highway visibility and access bypass road</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal popup -->
+  <div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="lightbox-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+          <img src="" alt="Zoomed view" class="lightbox-img" id="lightbox-modal-image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Floating Call Button -->
+  <a href="tel:+919922234567" class="floating-call-btn d-xl-none" aria-label="Call Hotel Indrayani" id="floating-phone-btn">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand / About Column -->
+        <div class="col-lg-4">
+          <a class="footer-logo" href="index.html" id="footer-logo-link">INDRAYANI<span> PURE VEG</span></a>
+          <p class="mb-4 text-white-50">Providing authentic Maharashtrian, North Indian, South Indian, Chinese, and Biryani specialties since 2018. A dependable pure veg dining spot for families and highway travelers.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="col-6 col-lg-2">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" id="footer-link-home">Home</a></li>
+            <li><a href="menu.html" id="footer-link-menu">Our Menu</a></li>
+            <li><a href="gallery.html" id="footer-link-gallery">Photo Gallery</a></li>
+            <li><a href="reservations.html" id="footer-link-reservations">Table Booking</a></li>
+            <li><a href="contact.html" id="footer-link-contact">Contact & Map</a></li>
+          </ul>
+        </div>
+
+        <!-- Order Online Column -->
+        <div class="col-6 col-lg-2">
+          <h4>Order Online</h4>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-angles-right me-1 text-warning"></i> Zomato Delivery</a></li>
+            <li><a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-angles-right me-1 text-warning"></i> Swiggy Delivery</a></li>
+            <li><a href="tel:+919922234567"><i class="fa-solid fa-angles-right me-1 text-warning"></i> Direct Call Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Address / Timings Column -->
+        <div class="col-lg-4">
+          <h4>Restaurant Info</h4>
+          <div class="footer-contact-item" id="footer-info-address">
+            <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Address:</strong><br>
+              Hotel Indrayani Pure Veg, PPM5+VRR, Talegaon-Chakan Road, Bypass, Induri, Talegaon Dabhade, Maharashtra 410507.
+            </div>
+          </div>
+          <div class="footer-contact-item" id="footer-info-phone">
+            <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Phone Reservation:</strong><br>
+              <a href="tel:+919922234567" class="text-white">+91 99222 34567</a> / <a href="tel:+919922234568" class="text-white">+91 99222 34568</a>
+            </div>
+          </div>
+          <div class="footer-contact-item" id="footer-info-hours">
+            <div class="footer-contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>Opening Hours:</strong><br>
+              All Days: 08:00 AM - 11:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p class="mb-0">&copy; 2026 Hotel Indrayani Pure Veg. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0 text-white-50">Local SEO optimization and Web design for highway diners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
